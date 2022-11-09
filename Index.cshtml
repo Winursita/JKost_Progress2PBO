@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+using System;
+using System.ComponentModel;
+using System.Reflection;
+using System.Reflection.PortableExecutable;
+using System.Text;
+< !DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" context="width=device-width, initial-scale=1.0" />
+    < title >@ViewData["Title"] - myfirstapp</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootdtrsp.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://
+            " />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="trye" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-AttributeTargets=".navbar-collapse">
+                    <span class="sr-only"> Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-page="/Index" class="navbar-brand"> EasyKost</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-pages="/Index"> Home</a></li>
+                    <li><a asp-pages="/About"> About</a></li>
+                    <li><a asp-pages="/Contact"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2022 - EasyKost</p>
+        </footer>
+    </div>ml
+
+
+
+
